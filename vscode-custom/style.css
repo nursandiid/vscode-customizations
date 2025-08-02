@@ -393,3 +393,186 @@ li.action-item.icon.checked a.action-label.codicon {
   bottom: 0;
   width: 0;
 }
+
+/* 🌈 Rainbow cursor */
+.monaco-editor .cursor {
+  border-left: 2px solid transparent !important;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  ) !important;
+  animation: blink 1s infinite, rainbow 5s infinite linear;
+}
+
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* 🔳 Rounded tabs */
+/* � Minimal tabs in VS Code */
+/* ✂️ Minimal tab styling */
+
+.editor-actions {
+  visibility: hidden;
+}
+
+.monaco-workbench .tabs-container {
+  align-items: start;
+}
+
+/* Remove space between tabs and underline */
+.monaco-workbench .part.editor > .content .editor-group-container > .title {
+  height: 24px !important;
+  padding-top: 0 !important;
+}
+
+.monaco-workbench .tabs-container .tab {
+  padding: 0 !important;
+  margin: 0 2px !important;
+  border-radius: 5px !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  transition: background-color 0.2s ease;
+  height: 24px !important;
+  min-height: 24px !important;
+}
+
+/* Center tab content vertically */
+.monaco-workbench .tabs-container .tab .tab-label {
+  line-height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.monaco-workbench .tabs-container .tab .monaco-icon-label-container {
+  font-size: 11px !important;
+  line-height: 24px !important;
+  height: 24px !important;
+  transform: translateY(-7px);
+}
+
+/* 🧼 Clean hover style */
+.monaco-workbench .tabs-container .tab:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+/* Pulse animation for urgent errors */
+.monaco-editor .squiggly-error {
+  background-color: rgba(255, 0, 0, 0.4) !important;
+  animation: pulse 0.3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tab-label::after {
+  transform: translateY(-11px);
+}
+
+/* ==================== */
+/* BEAUTIFUL MINIMAL SCROLLBAR */
+/* ==================== */
+
+.monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(143, 143, 143, 0.425) !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider:hover {
+  background: rgba(100, 100, 100, 0.4) !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider.active {
+  background: rgba(80, 80, 80, 0.6) !important;
+}
+
+/* Vertical scrollbar */
+.monaco-scrollable-element > .scrollbar.vertical .slider {
+  width: 10px !important;
+  min-width: 6px !important;
+}
+
+/* Horizontal scrollbar */
+.monaco-scrollable-element > .scrollbar.horizontal .slider {
+  height: 6px !important;
+  min-height: 6px !important;
+}
+
+/* Scrollbar corner */
+.monaco-scrollable-element > .visible.scrollbar > .scrollbar.vertical,
+.monaco-scrollable-element > .visible.scrollbar > .scrollbar.horizontal {
+  background: transparent !important;
+}
+
+/* ==================== */
+/* SMOOTH SCROLLING */
+/* ==================== */
+.monaco-editor .lines-content {
+  scroll-behavior: smooth !important;
+}
+
+/* ==================== */
+/* OPTIONAL: GLOW EFFECT */
+/* ==================== */
+.monaco-scrollable-element > .scrollbar > .slider:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Enable GPU acceleration for smoother rendering */
+.monaco-editor,
+.monaco-editor .overflow-guard,
+.monaco-editor .lines-content {
+  transform: translate3d(0, 0, 0) !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+  will-change: transform !important;
+}
+
+/* Smooth scrolling behavior */
+.monaco-editor .lines-content {
+  scroll-behavior: smooth !important;
+}
+
+/* Force smooth scrolling at the OS level */
+.monaco-editor .lines-content {
+  scroll-behavior: smooth !important;
+  -webkit-overflow-scrolling: touch !important; /* For macOS trackpads */
+}
+
+/* Disable line-by-line snapping */
+.monaco-editor .scrollbar.vertical .slider {
+  scroll-snap-type: none !important;
+}
+
+/* GPU Acceleration (reduces lag) */
+.monaco-editor,
+.monaco-editor .view-lines,
+.monaco-editor .lines-content {
+  transform: translate3d(0, 0, 0) !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+}
+
+/* rounded search section*/
+.action-item.command-center-center {
+  border-radius: 60px !important;
+}
