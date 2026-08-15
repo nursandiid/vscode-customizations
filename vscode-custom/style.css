@@ -240,3 +240,9 @@
 .monaco-workbench>.notifications-center .notifications-list-container .monaco-list-row:last-child {
   border-radius: 0px 0px var(--vscode-cornerRadius-large) var(--vscode-cornerRadius-large) !important;
 }
+
+/* JetBrains Icon folder */
+.show-file-icons .folder-icon::before,
+.show-file-icons .rootfolder-icon::before {
+  filter: brightness(0.6);
+}
