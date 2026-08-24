@@ -6,76 +6,13 @@
 }
 
 /* ------------ Activity Bar ------------ */
-.monaco-workbench .activitybar {
-  width: 44px !important;
+.style-override .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .active-item-indicator {
+  border-radius: var(--vscode-cornerRadius-large) !important;
+  box-shadow: 0 0 0 2px var(--vscode-activityBar-activeBorder) !important;
 }
 
-.monaco-workbench .activitybar>.content {
-  justify-content: center;
-  width: 40px !important;
-}
-
-.monaco-workbench .activitybar>.content>.composite-bar {
-  margin-bottom: inherit;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label.codicon {
-  border-radius: var(--vscode-cornerRadius-xLarge) !important;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .active-item-indicator:before {
-  border-left-color: transparent !important;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item {
-  border-radius: var(--vscode-cornerRadius-xLarge);
-  margin-left: 2px;
-  margin-bottom: 6px;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label.codicon,
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label:not(.codicon) {
-  width: 34px !important;
-  height: 34px !important;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label:not(.codicon) {
-  padding: 0;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label:not(.codicon):hover {
-  background-color: var(--vscode-input-foreground) !important;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item:focus .active-item-indicator:before {
-  border-left-color: transparent !important;
-}
-
-.monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .badge .badge-content {
-  position: absolute;
-  top: 16px;
-  right: 4px;
-}
-
-.monaco-workbench .activitybar li.action-item.icon {
-  border: 2px solid transparent;
-}
-
-.activitybar li.action-item.icon:hover {
-  border: 2px solid var(--vscode-icon-foreground);
-}
-
-.activitybar li.action-item.icon.checked:hover .codicon:before {
+.style-override .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .action-label.codicon {
   color: var(--vscode-activityBar-activeBorder) !important;
-}
-
-.activitybar li.action-item.icon.checked {
-  border: 2px solid var(--vscode-activityBar-activeBorder);
-}
-
-.activitybar li.action-item.icon.checked a.action-label.codicon {
-  color: var(--vscode-activityBar-activeBorder) !important;
-  border-radius: var(--vscode-cornerRadius-xLarge) !important;
 }
 
 /* ------------ Auxiliary Bar ------------ */
