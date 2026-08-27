@@ -6,13 +6,10 @@
 }
 
 /* ------------ Activity Bar ------------ */
-.style-override .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .active-item-indicator {
+.activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item .active-item-indicator,
+.activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .active-item-indicator,
+.activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item:not(.checked):hover .active-item-indicator {
   border-radius: var(--vscode-cornerRadius-large) !important;
-  box-shadow: 0 0 0 2px var(--vscode-activityBar-activeBorder) !important;
-}
-
-.style-override .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .action-label.codicon {
-  color: var(--vscode-activityBar-activeBorder) !important;
 }
 
 /* ------------ Auxiliary Bar ------------ */
@@ -173,13 +170,14 @@
   background-color: transparent !important;
 }
 
-/* ------------ Notifications ------------ */
-.monaco-workbench>.notifications-center .notifications-list-container .monaco-list-row:last-child {
-  border-radius: 0px 0px var(--vscode-cornerRadius-large) var(--vscode-cornerRadius-large) !important;
-}
-
 /* JetBrains Icon folder */
 .show-file-icons .folder-icon::before,
 .show-file-icons .rootfolder-icon::before {
   filter: brightness(0.6);
+}
+
+/* Debugger */
+.monaco-workbench .pane>.pane-body .welcome-view-content>.button-container,
+.monaco-workbench .pane>.pane-body .welcome-view-content>.button-container>.monaco-button {
+  max-width: 100% !important;
 }
